@@ -9,9 +9,6 @@ const nextConfig: NextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   
-  // Enable SWC minification for faster builds
-  swcMinify: true,
-  
   // Optimize images (if using next/image)
   images: {
     domains: [],
