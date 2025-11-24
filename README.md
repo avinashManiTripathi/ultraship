@@ -46,15 +46,22 @@ npm install
 
 ### Running the Application
 
-#### 1. Start the Backend (Terminal 1)
+#### Option 1: Run Both Together (Recommended - Single Command)
+```bash
+npm run dev
+```
+This will start both the backend (port 4000) and frontend (port 3000) simultaneously!
+
+#### Option 2: Run Separately
+**Terminal 1 - Backend:**
 ```bash
 npm run backend
 ```
 The GraphQL server will start at: `http://localhost:4000`
 
-#### 2. Start the Frontend (Terminal 2)
+**Terminal 2 - Frontend:**
 ```bash
-npm run dev
+npm run frontend
 ```
 The Next.js app will start at: `http://localhost:3000`
 
@@ -232,8 +239,9 @@ See [backend/README.md](backend/README.md) for complete API documentation.
 
 ```bash
 # Development
-npm run dev          # Start Next.js dev server
-npm run backend      # Start GraphQL server with hot reload
+npm run dev          # Start BOTH backend + frontend (recommended!)
+npm run frontend     # Start Next.js dev server only
+npm run backend      # Start GraphQL server only
 
 # Production
 npm run build        # Build Next.js app

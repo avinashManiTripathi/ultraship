@@ -18,46 +18,43 @@ npm install
 
 This installs all required packages for both frontend and backend.
 
-### 2️⃣ Start the Backend
-
-Open a terminal and run:
-
-```bash
-npm run backend
-```
-
-You should see:
-```
-✅ Database initialized with 12 employees
-🔐 Admin credentials: admin@ultraship.com / admin123
-🔐 Employee credentials: john.smith@ultraship.com / employee123
-🚀 Server ready at: http://localhost:4000
-📊 GraphQL Playground: http://localhost:4000
-```
-
-**Keep this terminal running!**
-
-### 3️⃣ Start the Frontend
-
-Open a **NEW** terminal and run:
+### 2️⃣ Start the Application (Single Command! 🚀)
 
 ```bash
 npm run dev
 ```
 
+This will start **BOTH** the backend and frontend at the same time!
+
 You should see:
 ```
-   ▲ Next.js 16.0.3
-   - Local:        http://localhost:3000
-   - Environments: .env.local
-
- ✓ Starting...
- ✓ Ready in 2.5s
+[BACKEND] ✅ Database initialized with 12 employees
+[BACKEND] 🔐 Admin credentials: admin@ultraship.com / admin123
+[BACKEND] 🚀 Server ready at: http://localhost:4000
+[FRONTEND] ▲ Next.js 16.0.3
+[FRONTEND] - Local: http://localhost:3000
+[FRONTEND] ✓ Ready in 2.5s
 ```
 
-### 4️⃣ Open Your Browser
+### 3️⃣ Open Your Browser
 
 Visit: **http://localhost:3000**
+
+---
+
+### Alternative: Run Separately (Optional)
+
+If you prefer to run them in separate terminals:
+
+**Terminal 1 - Backend:**
+```bash
+npm run backend
+```
+
+**Terminal 2 - Frontend:**
+```bash
+npm run frontend
+```
 
 ## 🔐 Login
 
@@ -120,21 +117,16 @@ ultraship/
 
 ### Port Already in Use
 
-**Backend (Port 4000):**
+**If ports 3000 or 4000 are in use:**
 ```bash
-# Kill process on port 4000
+# Kill process on port 4000 (backend)
 lsof -ti:4000 | xargs kill -9
 
-# Or use a different port
-PORT=4001 npm run backend
-```
-
-**Frontend (Port 3000):**
-```bash
-# Kill process on port 3000
+# Kill process on port 3000 (frontend)
 lsof -ti:3000 | xargs kill -9
 
-# Or Next.js will auto-assign next available port
+# Then restart
+npm run dev
 ```
 
 ### Cannot Connect to Backend
