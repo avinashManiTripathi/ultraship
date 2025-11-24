@@ -47,7 +47,7 @@ export const authResolvers = {
         role: employee.role,
       });
 
-      const { password: _, ...employeeWithoutPassword } = employee;
+      const { password: _loginPass, ...employeeWithoutPassword } = employee;
 
       return {
         token,
@@ -84,7 +84,7 @@ export const authResolvers = {
         role: newEmployee.role,
       });
 
-      const { password: _, ...employeeWithoutPassword } = newEmployee;
+      const { password: _registerPass, ...employeeWithoutPassword } = newEmployee;
 
       return {
         token,
